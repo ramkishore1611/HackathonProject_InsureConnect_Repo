@@ -1,4 +1,5 @@
 package com.selenium.tests;
+import com.selenium.base.Base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,21 +12,14 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 
-public class TravelIns {
-WebDriver driver;
-WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+public class TravelIns extends Base {
+    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 @Test
 public void check(){
-    driver = new ChromeDriver();
-    driver.manage().window().maximize();
-    driver.get("https://www.policybazaar.com/");
     WebElement travel = driver.findElement(By.xpath("//div[@class='prd-block'][5]"));
     travel.click();
-    WebElement country = wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"country\"]"))));
-    country.sendKeys("France");
-    WebElement date = driver.findElement(By.cssSelector("#newPq_mainWrapper > section > section.newPq_formSections > article.newPq_duration_wrap > div:nth-child(1)"));
-    date.click();
+
 
 }
 

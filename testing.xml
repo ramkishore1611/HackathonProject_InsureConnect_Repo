@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="E-Commerce Automation Suite" verbose="1">
+    <parameter name="browser" value="chrome" />
+    <test name="Insurance Flow">
+        <classes>
+            <class name="com.selenium.tests.TravelIns"/>
+        </classes>
+    </test>
+</suite>
