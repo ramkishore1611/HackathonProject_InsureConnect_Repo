@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 public class Base {
-    protected WebDriver driver;
+    public WebDriver driver;
     @BeforeMethod
     public void setUp(){
         driver = BrowserDriverSelection.getDriver("chrome");
