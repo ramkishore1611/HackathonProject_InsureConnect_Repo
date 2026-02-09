@@ -19,8 +19,6 @@ public class TravelIns extends Base {
 public void check(){
     WebElement travel = driver.findElement(By.xpath("//div[@class='prd-block'][5]"));
     travel.click();
-
-
 }
 
 }

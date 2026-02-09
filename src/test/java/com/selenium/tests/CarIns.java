@@ -15,6 +15,4 @@ public class CarIns extends Base{
     WebElement car = driver.findElement(By.xpath("//div[@class='prd-block'][2]"));
     car.click();
     driver.findElement(By.xpath("//span[contains(@class,'blueTextButton')]")).click();
-
-
 }}
